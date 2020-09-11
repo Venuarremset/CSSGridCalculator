@@ -1,0 +1,137 @@
+:root {
+  --light:#fff;
+  --dark:#333;
+  --blue:#00bcd4;
+  --red:#dd2c00;
+  --shadow:0 1px 5px rgba(104, 104, 104, 0.8);
+}
+html{
+  box-sizing: border-box;
+
+}
+body{
+  background: #ccc;
+  margin: 5% 20%;
+  line-height: 1.5;
+  padding: 3% 15%;
+
+}
+h1{
+  text-align: center;
+  color: #ff4b5c;
+}
+
+.num{
+  background: var(--light);
+  color: var(--dark);
+  font-size: 1.1rem;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+.num:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+.plus, .minus, .multiply, .divide{
+  background: var(--light);
+  color: var(--blue);
+  font-size: 1.1rem;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+  box-shadow: var(--shadow);
+}
+.equals{
+  background: var(--blue);
+  font-size: 1.1rem;
+  border: 0;
+  padding: 0.6rem 1.3rem;
+  color: var(--light);
+  text-decoration: none;
+}
+.reset{
+  background: var(--red);
+  border: 0;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.3rem;
+  color: var(--light);
+  text-decoration: none;
+}
+/* grid */
+.wrapper {
+  display:grid;
+  grid-gap: 4px;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-areas:
+  "screen screen screen screen"
+  "plus minus multiply divide"
+  "nine eight seven equals"
+  "six five four equals"
+  "three two one equals"
+  "zero dot reset equals"
+
+}
+.calculator-screen{
+  grid-column: 1 / 5;
+  line-height: 3rem;
+  text-align: right;
+  font-size: 2rem;
+  box-shadow: var(--shadow);
+}
+.plus{
+  grid-area: plus;
+}
+.minus{
+  grid-area: minus;
+}
+.multiply{
+  grid-area: multiply;
+}
+.divide{
+  grid-area: divide;
+}
+.equals{
+  grid-area: equals;
+}
+.reset{
+  grid-area: reset;
+}
+.one{
+  grid-area: one;
+}
+.two{
+  grid-area: two;
+}
+.three{
+  grid-area: three;
+}
+.four{
+  grid-area: four;
+}
+.five{
+  grid-area: five;
+}
+.six{
+  grid-area: six;
+}
+.zero{
+  grid-area: zero;
+}
+.seven{
+  grid-area: seven ;
+}
+.eight{
+  grid-area: eight;
+}
+.nine{
+  grid-area:nine ;
+}
+.dot{
+  grid-area:dot ;
+}
+.calculator-screen{
+  grid-area:screen;
+}
